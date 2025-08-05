@@ -1,0 +1,77 @@
+body {
+    background-color: #f0f4f7;
+    padding: 50px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Caixa central do formulário ou resultado */
+.caixa {
+    background-color: white;
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Rótulo do campo */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Campo de texto */
+input[type="text"] {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* Efeito quando clica no campo */
+input[type="text"]:focus {
+    border-radius: #007bff;
+}
+
+/* Botão de enviar */
+button {
+    padding: 8px 16px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse no botão */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Link de voltar */
+a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+}
+
+/* Efeito no link quando passa o mouse */
+a:hover {
+    background-color: #0056b3;
+}
