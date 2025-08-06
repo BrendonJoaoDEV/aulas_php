@@ -28,7 +28,7 @@
                 <option value="">Divisão (&#247;)</option>
             </select>
 
-            <button id="botao-calcular" name="botao-calcular" type="submit"></button>
+            <button id="botao-calcular" name="botao-calcular" type="submit">Calcular</button>
         </form>
     </main>
 </body>
