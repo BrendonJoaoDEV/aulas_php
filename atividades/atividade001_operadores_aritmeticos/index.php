@@ -12,7 +12,7 @@
     </header>
 
     <main>
-        <form method="POST" action="resultado.php">
+        <form id="formulario" method="POST" action="resultado.php">
             <label for="primeiro-numero">Digite o primeiro número:</label>
             <input id="primeiro-numero" name="primeiro-numero" type="number" required>
 
