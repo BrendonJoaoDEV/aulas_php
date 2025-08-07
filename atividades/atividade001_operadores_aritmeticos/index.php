@@ -12,7 +12,7 @@
     </header>
 
     <main>
-        <form id="formulario" method="POST" action="resultado.php">
+        <form method="POST" action="resultado.php">
             <label for="primeiro-numero">Digite o primeiro número:</label>
             <input id="primeiro-numero" name="primeiro-numero" type="number" required>
 
@@ -20,15 +20,17 @@
             <input id="segundo-numero" name="segundo-numero" type="number" required>
 
             <label for="escolha-operacao">Escolha a operação:</label>
-            <select id="escolha-operacao" name="escolha-operacao">
+            <select id="escolha-operacao" name="operacao">
                 <option value="selecione">--Selecione--</option>
-                <option value="">Soma (+)</option>
-                <option value="">Subtração (-)</option>
-                <option value="">Multiplicação (&#215;)</option>
-                <option value="">Divisão (&#247;)</option>
+                <option value="soma">Soma (+)</option>
+                <option value="subtracao">Subtração (-)</option>
+                <option value="multiplicacao">Multiplicação (&#215;)</option>
+                <option value="divisao">Divisão (&#247;)</option>
             </select>
 
-            <button id="botao-calcular" name="botao-calcular" type="submit">Calcular</button>
+            <p id="erro" name="erro"></p>
+
+            <button type="submit">Calcular</button>
         </form>
     </main>
 </body>
