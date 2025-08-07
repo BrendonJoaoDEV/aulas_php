@@ -74,3 +74,18 @@ button {
     font-size: 1.5rem;
     background-color: #0077B6;
 }
+
+#erro {
+    display: none;
+}
+
+p {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+a {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: #0077B6;
+}
