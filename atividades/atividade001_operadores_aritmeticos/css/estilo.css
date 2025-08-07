@@ -30,7 +30,7 @@ main {
     align-items: center;
 }
 
-form {
+.saida, form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,6 +85,7 @@ p {
 }
 
 a {
+    text-decoration: none;
     font-size: 1.5rem;
     padding: 0.5rem;
     color: #0077B6;

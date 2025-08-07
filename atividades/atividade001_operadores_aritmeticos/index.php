@@ -28,10 +28,12 @@
                 <option value="divisao">Divisão (&#247;)</option>
             </select>
 
-            <p id="erro" name="erro"></p>
+            <input type="text" id="erro" name="erro">
 
             <button type="submit">Calcular</button>
         </form>
     </main>
+
+    <script src="js/script.js" defer></script>
 </body>
 </html>
