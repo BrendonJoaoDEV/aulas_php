@@ -5,12 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const operacao = document.getElementById('escolha-operacao');
     const saidaErro = document.getElementById('erro');
 
-    formulario.addEventListener('submit', () => {
+    formulario.addEventListener('submit', (event) => {
+        event.preventDefault();
         let validacao = validarCalculo(primeiroNumero.value, segundoNumero.value, operacao.value);
-        if (!validacao.valido) {
-            console.log(validacao.erro);
-            saidaErro.textContent = validacao.erro;
-        }
+        saidaErro.value = validacao.erro;
+        formulario.submit();
     });
 });
 
