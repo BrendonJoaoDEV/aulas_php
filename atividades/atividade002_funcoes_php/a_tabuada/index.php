@@ -13,7 +13,7 @@
 
     <main>
         <section>
-            <form method="POST">
+            <form id="formulario" method="POST">
                 <input id="etr-numero" name="etr-numero" placeholder="Digite um número" type="number" required>
 
                 <button id="btn-calcular" type="submit">Calcular</button>
@@ -25,8 +25,10 @@
         <section>
             <?php
                 include 'public/processa.php';
-                foreach (calcularTabuada($numero) as $tabuada) {
-                    echo "$tabuada";
+                if (isset($numero)) {
+                    foreach (calcularTabuada($numero) as $tabuada) {
+                        echo "$tabuada";
+                    }
                 }
             ?>
         </section>
@@ -36,6 +38,6 @@
         <p>&copy; 2025 - Brendon J. C. Neves</p>
     </footer>
 
-    <script src="public/js/script.js"></script>
+    <script type="module" src="public/js/script.js"></script>
 </body>
 </html>

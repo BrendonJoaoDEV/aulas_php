@@ -27,7 +27,8 @@
             $resultados[] = "<ul>$resultado</ul>";
         }
         return $resultados;
+    }
+if (isset($_POST['etr-numero'])) {
+    $numero = (int) htmlspecialchars($_POST['etr-numero']);
 }
-
-$numero = (int) htmlspecialchars($_POST['etr-numero']);
 ?>
