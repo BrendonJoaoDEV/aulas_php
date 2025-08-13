@@ -5,7 +5,7 @@
         foreach ($operacoes as $operacao) {
             $resultado = "";
             for ($i=1; $i <= 10; $i++) {
-                $calculo = eval("$numero eval($operacao) $i;");
+                $calculo = eval("return $numero $operacao $i;");
                 $resultado .= "$numero $operacao $i = $calculo<br>";
             }
             $resultados[] = $resultado;

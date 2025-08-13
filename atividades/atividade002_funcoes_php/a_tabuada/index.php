@@ -25,7 +25,9 @@
         <section>
             <?php
                 include 'public/processa.php';
-                print_r(calcularTabuada($numero));
+                foreach (calcularTabuada($numero) as $tabuada) {
+                    echo "$tabuada<br>";
+                }
             ?>
         </section>
     </main>
