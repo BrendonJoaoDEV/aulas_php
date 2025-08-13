@@ -11,16 +11,16 @@
                         $resultado .= "<li>$numero + $i = $calculo</li>";
                         break;
                     case "-":
-                        $calculo = $numero - $i;
-                        $resultado .= "<li>$numero - $i = $calculo</li>";
+                        $calculo = $numero + $i;
+                        $resultado .= "<li>$calculo - $numero = $i</li>";
                         break;
                     case "*":
                         $calculo = $numero * $i;
                         $resultado .= "<li>$numero &#215; $i = $calculo</li>";
                         break;
                     case "/":
-                        $calculo = number_format($numero / $i, 2);
-                        $resultado .= "<li>$numero &#247; $i = $calculo</li>";
+                        $calculo = $numero * $i;
+                        $resultado .= "<li>$calculo &#247; $numero = $i</li>";
                         break;
                 }
             }
@@ -29,7 +29,7 @@
         return $resultados;
     }
 
-    if (isset($_POST['etr-numero'])) {
-        $numero = (int) htmlspecialchars($_POST['etr-numero']);
+    if (isset($_POST["etr-numero"])) {
+        $numero = (int) htmlspecialchars($_POST["etr-numero"]);
     }
 ?>
