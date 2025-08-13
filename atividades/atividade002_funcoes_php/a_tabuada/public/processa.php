@@ -1,14 +1,30 @@
 <?php
     function calcularTabuada($numero) {
-        $operacoes = ['+', '-', '*', '/'];
+        $operacoes = ["+", "-", "*", "/"];
         $resultados = [];
         foreach ($operacoes as $operacao) {
             $resultado = "";
             for ($i=1; $i <= 10; $i++) {
-                $calculo = eval("return $numero $operacao $i;");
-                $resultado .= "$numero $operacao $i = $calculo<br>";
+                switch ($operacao) {
+                    case "+":
+                        $calculo = $numero + $i;
+                        $resultado .= "<li>$numero + $i = $calculo</li>";
+                        break;
+                    case "-":
+                        $calculo = $numero - $i;
+                        $resultado .= "<li>$numero - $i = $calculo</li>";
+                        break;
+                    case "*":
+                        $calculo = $numero * $i;
+                        $resultado .= "<li>$numero &#215; $i = $calculo</li>";
+                        break;
+                    case "/":
+                        $calculo = number_format($numero / $i, 2);
+                        $resultado .= "<li>$numero &#247; $i = $calculo</li>";
+                        break;
+                }
             }
-            $resultados[] = $resultado;
+            $resultados[] = "<ul>$resultado</ul>";
         }
         return $resultados;
 }

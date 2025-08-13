@@ -26,7 +26,7 @@
             <?php
                 include 'public/processa.php';
                 foreach (calcularTabuada($numero) as $tabuada) {
-                    echo "$tabuada<br>";
+                    echo "$tabuada";
                 }
             ?>
         </section>
