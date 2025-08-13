@@ -28,7 +28,8 @@
         }
         return $resultados;
     }
-if (isset($_POST['etr-numero'])) {
-    $numero = (int) htmlspecialchars($_POST['etr-numero']);
-}
+
+    if (isset($_POST['etr-numero'])) {
+        $numero = (int) htmlspecialchars($_POST['etr-numero']);
+    }
 ?>
