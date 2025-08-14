@@ -51,7 +51,9 @@
                 <tbody>
                     <?php
                         include 'public/processa.php';
-                        visualizarAlunos($escola);
+                        if (isset($escola)) {
+                            visualizarAlunos($escola);
+                        }
                     ?>
                 </tbody>
             </table>
