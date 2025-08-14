@@ -25,9 +25,11 @@
         <section>
             <?php
                 include 'public/processa.php';
-                $resultados = contarVogais($string);
-                foreach ($resultados as $resultado) {
-                    echo "$resultado<br>";
+                if (isset($string)) {
+                    $resultados = contarVogais($string);
+                    foreach ($resultados as $key => $value) {
+                        echo "$key: $value<br>";
+                    }
                 }
             ?>
         </section>

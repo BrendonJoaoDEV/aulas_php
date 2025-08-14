@@ -1,7 +1,4 @@
 <?php
-    // 1° Quebrar frase em letras
-    // 2° Varrer as letras e comparar com as vogais
-    // 3° Retornar as contagens
     function contarVogais($string) {
         $string = str_split($string);
         $a = 0;
@@ -14,19 +11,26 @@
             switch ($letra) {
                 case "a":
                     $a++;
+                    break;
                 case "e":
                     $e++;
+                    break;
                 case "i":
                     $i++;
+                    break;
                 case "o":
                     $o++;
+                    break;
                 case "u":
                     $u++;
+                    break;
             }
         }
 
-        return [$a, $e, $i, $o, $u];
+        return ["a" => $a, "e" => $e, "i" =>$i, "o" => $o, "u" => $u];
     }
 
-    $string = $_POST["etr-string"];
+    if (isset($_POST["etr-string"])) {
+        $string = (string) htmlspecialchars($_POST["etr-string"]);
+    }
 ?>
