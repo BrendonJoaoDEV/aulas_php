@@ -1,23 +1,17 @@
 <?php
     function verificarPrimo($numero) {
-        if ($numero > 1) {
-            $primo = true;
-            for ($i=$; $i < $numero; $i++) {
-                if ($i % 2 == 0) {
-                    $primo = false;
+        for ($i=2; $i <= $numero; $i++) {
+            for ($j=2; $i; $i++) {
+                if ($i % $j === 0) {
                     break;
                 } else {
-                    $primo = true;
-                    continue;
+                    echo "$i, ";
                 }
             }
-            if ($primo) {
-                return $numero;
-            } else {
-                return "Não primo";
-            }
-        } else {
-            return "Zero";
         }
+    }
+
+    if (isset($_POST["etr-numero"])) {
+        $numero = $_POST["etr-numero"];
     }
 ?>
