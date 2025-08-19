@@ -27,8 +27,9 @@
                 include 'public/processa.php';
                 if (isset($string)) {
                     $resultados = contarVogais($string);
+                    echo "Na palavre/frase '$string' temos: ";
                     foreach ($resultados as $key => $value) {
-                        echo "$key: $value<br>";
+                        echo "<br>$key: $value";
                     }
                 }
             ?>
