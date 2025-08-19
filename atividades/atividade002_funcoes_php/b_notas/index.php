@@ -51,8 +51,8 @@
                 <tbody>
                     <?php
                         include 'public/processa.php';
-                        if (isset($escola)) {
-                            visualizarAlunos($escola);
+                        if (isset($_SESSION['escola'])) {
+                            visualizarAlunos($_SESSION['escola']);
                         }
                     ?>
                 </tbody>

@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     function calcularMedia($valores) {
         $soma = 0;
         foreach ($valores as $valor) {
@@ -24,37 +26,44 @@
         foreach ($aluno as $key => $value) {
             $aluno_adicionar .= "<td>$value</td>";
         }
-        $escola[] = $aluno_adicionar;
+        array_push($escola, $aluno_adicionar);
         return $escola;
     }
 
     function visualizarAlunos($escola) {
         foreach ($escola as $aluno) {
+            echo '<tr>';
             print_r($aluno);
+            echo '</tr>';
         }
     }
 
 
     if (isset($_POST["etr-nome"])) {
-        $notas = [
-            $_POST["etr-nota1"],
-            $_POST["etr-nota2"],
-            $_POST["etr-nota3"],
-            $_POST["etr-nota4"]
-        ];
+
+        $nome = $_POST["etr-nome"];
+
+        $nota1 = (float) $_POST["etr-nota1"];
+        $nota2 = (float) $_POST["etr-nota2"];
+        $nota3 = (float) $_POST["etr-nota3"];
+        $nota4 = (float) $_POST["etr-nota4"];
+        
+
+        $notas = compact('nota1', 'nota2', 'nota3', 'nota4');
 
         $media = calcularMedia($notas);
 
-        $aluno = [
-            "nome" => $_POST["etr-nome"],
-            "nota1" => $notas[0],
-            "nota2" => $notas[1],
-            "nota3" => $notas[2],
-            "nota4" => $notas[3],
-            "media" => $media,
-            "situacao" => verificarSituacao($media)
-        ];
+        $situacao = verificarSituacao($media);
 
-        $escola = adicionarAluno($aluno, $escola);
+        $aluno = compact('nome', 'nota1', 'nota2', 'nota3', 'nota4', 'media', 'situacao');
+
+        if (isset($_SESSION['escola'])) {
+            $_SESSION['escola'] = adicionarAluno($aluno, $_SESSION['escola']);
+            echo 'um';
+        } else {
+            $_SESSION['escola'] = [];
+            $_SESSION['escola'] = adicionarAluno($aluno, $_SESSION['escola']);
+            echo 'dois';
+        }
     }
 ?>
