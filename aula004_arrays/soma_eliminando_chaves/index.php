@@ -49,16 +49,16 @@
                             $qtd_notas++; // Conta quantas notas foram somadas
                         }
                     }
+                    
+                    // Calcula a média
+                    $media = $soma_notas / $qtd_notas;
+    
+                    // Exibe os dados do aluno
+                    echo "<h3>Aluno: $nome</h3>";
+                    echo "Soma: $soma_notas<br>";
+                    // Formata a média com 2 casas decimais
+                    echo 'Média: ' . number_format($media, 2, ',', '.') . '<hr>';
                 }
-
-                // Calcula a média
-                $media = $soma_notas / $qtd_notas;
-
-                // Exibe os dados do aluno
-                echo "<h3>Aluno: $nome</h3>";
-                echo "Soma: $soma_notas<br>";
-                // Formata a média com 2 casas decimais
-                echo 'Média: ' . number_format($media, 2, ',', '.') . '<hr>';
 
         ?> 
     </main>
