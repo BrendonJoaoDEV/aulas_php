@@ -33,6 +33,9 @@
         <section>
             <?php
                 include "public/processa.php";
+                if (isset($resultado)) {
+                    echo "<p>$resultado</p>";
+                }
             ?>
         </section>
     </main>
